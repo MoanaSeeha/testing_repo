@@ -12,8 +12,11 @@ app.use(cors());
 app.use(bodyParser.json());
 
 const myMiddleware = function (req, res, next) {
-  console.log("if" + (1 === 1));
-  next();
+  console.log("if 1 === 1 is " + (1 === 1));
+  if(1 === 1) next();
+  else res.status(400).json({
+    success: false,
+  });
 };
 
 app.use(myMiddleware);
