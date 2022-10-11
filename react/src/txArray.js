@@ -38,7 +38,6 @@ const arr = [
   },
 ];
 const TxArrayRebuilding = () => {
-  const [newArray, setNewArray] = useState([]);
   useEffect(() => {
     let temp_arr = [];
     arr.forEach((item_1) => {
@@ -66,9 +65,8 @@ const TxArrayRebuilding = () => {
       });
       if (!flag) temp_arr.push(item_1);
     });
-    setNewArray(temp_arr);
+    console.log(temp_arr);
   }, []);
-  console.log(newArray);
   return (
     <></>
   );
