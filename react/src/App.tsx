@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import axios from "axios";
+import TxArrayRebuilding from "./txArray";
 
 interface Idata {
   name: string;
@@ -55,6 +56,10 @@ function App() {
               </div>
             ))}
           </div>
+        </div>
+        <div className="my-6">
+          <div className="my-4 text-lg">Transaction Array Rebuilding</div>
+          <TxArrayRebuilding/>
         </div>
       </div>
     </div>
